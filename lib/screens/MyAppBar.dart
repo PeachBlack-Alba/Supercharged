@@ -1,26 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:supercharged/supercharged.dart';
 
 
 class MyAppBar extends StatefulWidget {
   @override
-  _AppBarState createState() => _AppBarState();
+  _MyAppBarState createState() => _MyAppBarState();
 }
 
-class _AppBarState extends State<AppBar> {
+class _MyAppBarState extends State<MyAppBar> {
   @override
   Widget build(BuildContext context) {
-   final red =  "#CAFAFE".toColor();
-
+    // .toColor()
+    final lightBlue =  "#cafafe".toColor();
     return Scaffold(
       appBar: AppBar(
-        //backgroundColor: colorGreen,
+        backgroundColor: lightBlue,
         flexibleSpace: Container(
           decoration: BoxDecoration(
-            color: red,
+            color: lightBlue,
           ),
         ),
-        title: Center(child: Text('Animations here please', style: TextStyle(fontSize: 20, fontFamily: 'Play', fontWeight: FontWeight.bold, color: Colors.black),
+        title: Center(child: Text('Supercharged trial', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
         ),
         ),
         leading:

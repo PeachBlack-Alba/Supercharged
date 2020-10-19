@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:superPackage/screens/MyAppBar.dart';
 
 
 class Home extends StatefulWidget {
@@ -12,7 +13,10 @@ class _HomeState extends State<Home> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(),
+        appBar: PreferredSize(
+            preferredSize: const Size.fromHeight(50),
+            child: MyAppBar()),
+        body: Container(),
       ),
     );
   }
