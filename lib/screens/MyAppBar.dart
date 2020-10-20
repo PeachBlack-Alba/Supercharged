@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:superPackage/ui/styles/Colors.dart';
 import 'package:supercharged/supercharged.dart';
 
 
@@ -11,14 +12,12 @@ class MyAppBar extends StatefulWidget {
 class _MyAppBarState extends State<MyAppBar> {
   @override
   Widget build(BuildContext context) {
-    // .toColor()
-    final lightBlue =  "#cafafe".toColor();
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: lightBlue,
+        backgroundColor: ColorsPalete.primaryGrey,
         flexibleSpace: Container(
           decoration: BoxDecoration(
-            color: lightBlue,
+            color: ColorsPalete.primaryGrey,
           ),
         ),
         title: Center(child: Text('Supercharged trial', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),

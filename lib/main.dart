@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:superPackage/screens/Dates.dart';
 import 'screens/Home.dart';
 
 void main() {
@@ -7,6 +8,14 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Home();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      routes: {
+        '/': (context) => Home(),
+        '/Dates': (context) => Dates(),
+        //'/List': (context) => List(),
+      },
+    );
   }
 }
