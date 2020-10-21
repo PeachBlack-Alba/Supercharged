@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:superPackage/screens/MyAppBar.dart';
+import 'package:superPackage/ui/components/RoundButton.dart';
 import 'package:superPackage/ui/styles/Colors.dart';
 import 'package:supercharged/supercharged.dart';
 
@@ -51,27 +52,23 @@ class _HomeState extends State<Home> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  RaisedButton(
-                      child: Text('Dates Selection'),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) => Dates()),
-                        );},
-                    color: ColorsPalete.lightGrey,
-                    splashColor: ColorsPalete.darkGrey,
-                    textColor: Colors.black,
+                  RoundedButton(
+                    text: 'Dates',
+                    width: 200.0,
+                    press: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => Dates()), );
+                    },
                   ),
-                  RaisedButton(
-                      child: Text('List'),
-                      onPressed: () {
-                        Navigator.push(
+                  RoundedButton(
+                    text: 'List',
+                    width: 200.0,
+                    press: () {
+                      Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => ListFilters()),
-                        );},
-                    color: ColorsPalete.lightGrey,
-                    splashColor: ColorsPalete.darkGrey,
-                    textColor: Colors.black,
+                          MaterialPageRoute(builder: (context) => ListFilters()), );
+                    },
                   ),
 
                 ],
