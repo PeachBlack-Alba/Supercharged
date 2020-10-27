@@ -34,8 +34,8 @@ flutter:
   uses-material-design: true
 
 
-  assets:
-      - lib/assets/images/missy.png
+ # assets:
+  #    - assets/images/missy.png
 
 
   # fonts:

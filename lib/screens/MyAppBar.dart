@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:superPackage/ui/styles/Colors.dart';
 import 'package:supercharged/supercharged.dart';
 
-
 class MyAppBar extends StatefulWidget {
   @override
   _MyAppBarState createState() => _MyAppBarState();
@@ -20,11 +19,14 @@ class _MyAppBarState extends State<MyAppBar> {
             color: ColorsPalete.primaryGrey,
           ),
         ),
-        title: Center(child: Text('Supercharged trial', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
+        title: Center(
+          child: Text(
+            'Supercharged trial',
+            style: TextStyle(
+                fontSize: 20, fontWeight: FontWeight.bold, color: Colors.black),
+          ),
         ),
-        ),
-        leading:
-        GestureDetector(
+        leading: GestureDetector(
           onTap: () {
             Navigator.pop(context);
           },
@@ -32,11 +34,8 @@ class _MyAppBarState extends State<MyAppBar> {
             Icons.arrow_back_ios,
           ),
         ),
-        iconTheme: IconThemeData(
-            size: 30.0,
-            color: Colors.black,
-            opacity: 10.0
-        ),
+        iconTheme:
+            IconThemeData(size: 30.0, color: Colors.black, opacity: 10.0),
       ),
     );
   }

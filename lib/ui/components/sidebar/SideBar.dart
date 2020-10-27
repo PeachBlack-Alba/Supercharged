@@ -63,7 +63,7 @@ class _SideBarState extends State<SideBar>
           duration: _animationDuration,
           top: 0,
           bottom: 0,
-          left: isSidebarOpenedAsync.data ? 0 : 0,
+          left: isSidebarOpenedAsync.data ? 0 : -screenWidth,
           right: isSidebarOpenedAsync.data ? 0 : screenWidth - 50.0,
           child: Row(
             children: <Widget>[
@@ -78,26 +78,25 @@ class _SideBarState extends State<SideBar>
                       Column(
                         children: [
                           Text(
-                              'Missy Elliot',
-                              style: TextStyle(
-                                color: ColorsPalete.lightGrey,
-                                fontSize: 30.0,
-                                fontWeight: FontWeight.w800,
-                              ),
+                            'Missy Elliot',
+                            style: TextStyle(
+                              color: ColorsPalete.lightGrey,
+                              fontSize: 30.0,
+                              fontWeight: FontWeight.w800,
                             ),
-                             Text(
-                              'queenOfThe90s@gmail.com',
-                              style: TextStyle(
-                                color: ColorsPalete.lightGrey,
-                                fontSize: 20.0,
-                              ),
+                          ),
+                          Text(
+                            'queenOfThe90s@gmail.com',
+                            style: TextStyle(
+                              color: ColorsPalete.lightGrey,
+                              fontSize: 20.0,
                             ),
-                             CircleAvatar(
+                          ),
+                          CircleAvatar(
                               radius: 40.0,
-                              backgroundImage:
-                                  AssetImage('assets/images/missy.png'),
-                              backgroundColor: Colors.transparent,
-                            ),
+                              child:
+                                Icon(Icons.perm_identity, color: Colors.white),
+                          ),
                         ],
                       ),
                     ],
