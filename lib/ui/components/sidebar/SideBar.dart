@@ -75,29 +75,34 @@ class _SideBarState extends State<SideBar>
                       SizedBox(
                         height: 100.0,
                       ),
-                      Column(
-                        children: [
-                          Text(
-                            'Missy Elliot',
-                            style: TextStyle(
-                              color: ColorsPalete.lightGrey,
-                              fontSize: 30.0,
-                              fontWeight: FontWeight.w800,
-                            ),
+                      ListTile(
+                        title: Text(
+                          'Missy Elliot',
+                          style: TextStyle(
+                            color: ColorsPalete.lightGrey,
+                            fontSize: 30.0,
+                            fontWeight: FontWeight.w800,
                           ),
-                          Text(
-                            'queenOfThe90s@gmail.com',
-                            style: TextStyle(
-                              color: ColorsPalete.lightGrey,
-                              fontSize: 20.0,
-                            ),
+                        ),
+                        subtitle: Text(
+                          'queenOfThe90s@gmail.com',
+                          style: TextStyle(
+                            color: ColorsPalete.lightGrey,
+                            fontSize: 18.0,
                           ),
-                          CircleAvatar(
-                              radius: 40.0,
-                              child:
-                                Icon(Icons.perm_identity, color: Colors.white),
-                          ),
-                        ],
+                        ),
+                        leading: CircleAvatar(
+                          backgroundColor: ColorsPalete.lightGrey,
+                          child: Icon(Icons.perm_identity, color: Colors.white),
+                          radius: 40,
+                        ),
+                      ),
+                      Divider(
+                        height: 64,
+                        thickness: 0.5,
+                        color: ColorsPalete.lightGrey,
+                        indent: 32,
+                        endIndent: 32,
                       ),
                     ],
                   ),
