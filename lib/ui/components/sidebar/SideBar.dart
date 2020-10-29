@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:superPackage/ui/styles/Colors.dart';
 
+import 'MenuItems.dart';
+
 class SideBar extends StatefulWidget {
   @override
   _SideBarState createState() => _SideBarState();
@@ -103,6 +105,18 @@ class _SideBarState extends State<SideBar>
                         color: ColorsPalete.lightGrey,
                         indent: 32,
                         endIndent: 32,
+                      ),
+                      MenuItem(
+                        icon: Icons.home,
+                        title: 'Home',
+                      ),
+                      MenuItem(
+                        icon: Icons.person,
+                        title: 'My Accounts',
+                      ),
+                      MenuItem(
+                        icon: Icons.analytics,
+                        title: 'Sollar',
                       ),
                     ],
                   ),
