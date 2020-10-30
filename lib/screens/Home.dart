@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:superPackage/screens/MyAppBar.dart';
 import 'package:superPackage/ui/components/RoundButton.dart';
 import 'package:superPackage/ui/styles/Colors.dart';
 import 'package:supercharged/supercharged.dart';
@@ -19,7 +18,7 @@ class _HomeState extends State<Home> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
+        /*appBar: AppBar(
           backgroundColor: ColorsPalete.primaryGrey,
           flexibleSpace: Container(
             decoration: BoxDecoration(
@@ -45,13 +44,21 @@ class _HomeState extends State<Home> {
           ),
           iconTheme:
               IconThemeData(size: 30.0, color: Colors.black, opacity: 10.0),
-        ),
+        ),*/
         body: Stack(
           children: <Widget>[
             Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
+                  SizedBox(height: 50),
+                  Text(
+                    'Supercharged trial',
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black),
+                  ),
                   RoundedButton(
                     text: 'Dates',
                     width: 200.0,

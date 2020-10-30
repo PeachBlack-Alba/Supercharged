@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:superPackage/ui/styles/Colors.dart';
 
+import 'CustomMenuClipper.dart';
 import 'MenuItems.dart';
 
 class SideBar extends StatefulWidget {
@@ -71,6 +72,7 @@ class _SideBarState extends State<SideBar>
             children: <Widget>[
               Expanded(
                 child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   color: ColorsPalete.darkGrey,
                   child: Column(
                     children: <Widget>[
@@ -118,6 +120,21 @@ class _SideBarState extends State<SideBar>
                         icon: Icons.analytics,
                         title: 'Sollar',
                       ),
+                      Divider(
+                        height: 64,
+                        thickness: 0.5,
+                        color: ColorsPalete.lightGrey,
+                        indent: 32,
+                        endIndent: 32,
+                      ),
+                      MenuItem(
+                        icon: Icons.settings,
+                        title: 'Settings',
+                      ),
+                      MenuItem(
+                        icon: Icons.exit_to_app,
+                        title: 'Logout',
+                      ),
                     ],
                   ),
                 ),
@@ -128,16 +145,19 @@ class _SideBarState extends State<SideBar>
                   onTap: () {
                     onIconPressed();
                   },
-                  child: Container(
-                    height: 110.0,
-                    width: 35.0,
-                    color: ColorsPalete.darkGrey,
-                    alignment: Alignment.centerLeft,
-                    child: AnimatedIcon(
-                      progress: _animationController.view,
-                      icon: AnimatedIcons.menu_close,
-                      color: ColorsPalete.lightGrey,
-                      size: 25.0,
+                  child: ClipPath(
+                    clipper: CustomMenuClipper(),
+                    child: Container(
+                      height: 110.0,
+                      width: 35.0,
+                      color: ColorsPalete.darkGrey,
+                      alignment: Alignment.centerLeft,
+                      child: AnimatedIcon(
+                        progress: _animationController.view,
+                        icon: AnimatedIcons.menu_close,
+                        color: ColorsPalete.lightGrey,
+                        size: 25.0,
+                      ),
                     ),
                   ),
                 ),
