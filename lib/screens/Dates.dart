@@ -24,6 +24,7 @@ class Dates extends StatelessWidget {
                   children: chunkedDays.map(buildRow).toList(),
                 ),
               ),
+              SizedBox(height: 50.0),
               GestureDetector(
                 onTap: () {
                   Navigator.pop(context);
