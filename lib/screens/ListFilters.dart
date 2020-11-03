@@ -49,7 +49,7 @@ class _ListFiltersState extends State<ListFilters> {
               height: 200.0,
               width: 400.0,
               decoration: BoxDecoration(
-                color: ColorsPalete.lightGrey,
+                color: ColorsPalete.lightBlack,
                 borderRadius: BorderRadius.circular(10.0),
               ),
               alignment: Alignment(0.0, 0.0),
@@ -75,7 +75,7 @@ class _ListFiltersState extends State<ListFilters> {
               margin: const EdgeInsets.only(right: 20.0, bottom: 20.0),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10.0),
-                color: ColorsPalete.lightGrey,
+                color: ColorsPalete.lightBlack,
               ),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),

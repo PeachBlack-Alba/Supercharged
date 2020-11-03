@@ -16,6 +16,7 @@ class _SideBarState extends State<SideBar>
     with SingleTickerProviderStateMixin<SideBar> {
   AnimationController _animationController;
   StreamController<bool> isSidebarOpenedStreamController;
+
   // value of the Stream
   Stream<bool> isSidebarOpenedStream;
   StreamSink<bool> isSidebarOpenedSink;
@@ -73,7 +74,7 @@ class _SideBarState extends State<SideBar>
               Expanded(
                 child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                  color: ColorsPalete.darkGrey,
+                  color: ColorsPalete.primaryBlack,
                   child: Column(
                     children: <Widget>[
                       SizedBox(
@@ -83,7 +84,7 @@ class _SideBarState extends State<SideBar>
                         title: Text(
                           'Missy Elliot',
                           style: TextStyle(
-                            color: ColorsPalete.lightGrey,
+                            color: ColorsPalete.lightGreen,
                             fontSize: 30.0,
                             fontWeight: FontWeight.w800,
                           ),
@@ -91,20 +92,20 @@ class _SideBarState extends State<SideBar>
                         subtitle: Text(
                           'queenOfThe90s@gmail.com',
                           style: TextStyle(
-                            color: ColorsPalete.lightGrey,
+                            color: ColorsPalete.lightGreen,
                             fontSize: 18.0,
                           ),
                         ),
                         leading: CircleAvatar(
-                          backgroundColor: ColorsPalete.lightGrey,
-                          child: Icon(Icons.perm_identity, color: Colors.white),
+                          backgroundColor: ColorsPalete.lightGreen,
+                          child: Icon(Icons.perm_identity, color: ColorsPalete.primaryBlack),
                           radius: 40,
                         ),
                       ),
                       Divider(
                         height: 64,
                         thickness: 0.5,
-                        color: ColorsPalete.lightGrey,
+                        color: ColorsPalete.lightGreen,
                         indent: 32,
                         endIndent: 32,
                       ),
@@ -123,7 +124,7 @@ class _SideBarState extends State<SideBar>
                       Divider(
                         height: 64,
                         thickness: 0.5,
-                        color: ColorsPalete.lightGrey,
+                        color: ColorsPalete.lightGreen,
                         indent: 32,
                         endIndent: 32,
                       ),
@@ -150,12 +151,12 @@ class _SideBarState extends State<SideBar>
                     child: Container(
                       height: 110.0,
                       width: 35.0,
-                      color: ColorsPalete.darkGrey,
+                      color: ColorsPalete.primaryBlack,
                       alignment: Alignment.centerLeft,
                       child: AnimatedIcon(
                         progress: _animationController.view,
                         icon: AnimatedIcons.menu_close,
-                        color: ColorsPalete.lightGrey,
+                        color: ColorsPalete.lightGreen,
                         size: 25.0,
                       ),
                     ),

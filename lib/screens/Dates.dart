@@ -19,7 +19,7 @@ class Dates extends StatelessWidget {
             children: [
               SizedBox(height: 50),
               Container(
-                color: ColorsPalete.primaryGrey,
+                color: ColorsPalete.primaryBlack,
                 child: Column(
                   children: chunkedDays.map(buildRow).toList(),
                 ),
@@ -35,7 +35,7 @@ class Dates extends StatelessWidget {
                     margin: const EdgeInsets.only(right: 20.0, bottom: 20.0),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10.0),
-                      color: ColorsPalete.lightGrey,
+                      color: ColorsPalete.lightBlack,
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),

@@ -18,67 +18,45 @@ class _HomeState extends State<Home> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        /*appBar: AppBar(
-          backgroundColor: ColorsPalete.primaryGrey,
-          flexibleSpace: Container(
-            decoration: BoxDecoration(
-              color: ColorsPalete.primaryGrey,
-            ),
-          ),
-          title: Center(
-            child: Text(
-              'Supercharged trial',
-              style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.black),
-            ),
-          ),
-          leading: GestureDetector(
-            onTap: () {
-              Navigator.pop(context);
-            },
-            child: Icon(
-              Icons.menu_outlined,
-            ),
-          ),
-          iconTheme:
-              IconThemeData(size: 30.0, color: Colors.black, opacity: 10.0),
-        ),*/
         body: Stack(
           children: <Widget>[
             Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[
-                  SizedBox(height: 50),
-                  Text(
-                    'Supercharged trial',
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black),
-                  ),
-                  RoundedButton(
-                    text: 'Dates',
-                    width: 200.0,
-                    press: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => Dates()), );
-                    },
-                  ),
-                  RoundedButton(
-                    text: 'List',
-                    width: 200.0,
-                    press: () {
-                      Navigator.push(
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                color: ColorsPalete.primaryBlack,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    SizedBox(height: 80.0),
+                    Text(
+                      'Supercharged trial',
+                      style: TextStyle(
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                          color: ColorsPalete.lightGreen),
+                    ),
+                    SizedBox(height: 50.0,),
+                    RoundedButton(
+                      text: 'Dates',
+                      width: 200.0,
+                      press: () {
+                        Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => ListFilters()), );
-                    },
-                  ),
+                          MaterialPageRoute(builder: (context) => Dates()), );
+                      },
+                    ),
+                    RoundedButton(
+                      text: 'List',
+                      width: 200.0,
+                      press: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(builder: (context) => ListFilters()), );
+                      },
+                    ),
 
-                ],
+                  ],
+                ),
               ),
             ),
           ],

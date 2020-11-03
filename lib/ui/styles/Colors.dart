@@ -3,9 +3,10 @@ import 'package:supercharged/supercharged.dart';
 
 class ColorsPalete {
 
-  static final primaryGrey = "#9e9e9e".toColor();
-  static final lightGrey = "#cfcfcf".toColor();
-  static final darkGrey = "#707070".toColor();
+  static final primaryBlack = "#000000".toColor();
+  static final lightBlack = "#212121".toColor();
+
+  static final lightGreen = "#e5ffff".toColor();
 
 }
 
