@@ -35,13 +35,14 @@ class _ListFiltersState extends State<ListFilters> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ColorsPalete.primaryBlack,
       body: Column(
         children: [
           Padding(
             padding: const EdgeInsets.all(40.0),
             child: Text(
               'sorting method now allows you sort data inside your processing flow:',
-              style: TextStyle(fontSize: 20.0),
+              style: TextStyle(fontSize: 20.0, color: ColorsPalete.lightGreen),
             ),
           ),
           Center(
@@ -49,7 +50,8 @@ class _ListFiltersState extends State<ListFilters> {
               height: 200.0,
               width: 400.0,
               decoration: BoxDecoration(
-                color: ColorsPalete.lightBlack,
+                color: ColorsPalete.primaryBlack,
+                border: Border.all(color: ColorsPalete.lightGreen),
                 borderRadius: BorderRadius.circular(10.0),
               ),
               alignment: Alignment(0.0, 0.0),
@@ -59,7 +61,7 @@ class _ListFiltersState extends State<ListFilters> {
                     .filter((p) => p.age < 60)
                     .sortedByNum((p) => p.age)
                     .map((p) => Text("${p.name}  age: ${p.age}",
-                        style: TextStyle(fontSize: 20.0)))
+                        style: TextStyle(fontSize: 20.0, color: ColorsPalete.lightGreen)))
                     .toList(),
               ),
             ),
@@ -74,14 +76,15 @@ class _ListFiltersState extends State<ListFilters> {
               width: 200.0,
               margin: const EdgeInsets.only(right: 20.0, bottom: 20.0),
               decoration: BoxDecoration(
+                border: Border.all(color: ColorsPalete.lightGreen),
                 borderRadius: BorderRadius.circular(10.0),
-                color: ColorsPalete.lightBlack,
+                color: ColorsPalete.primaryBlack,
               ),
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text(
                   'Back to main screen',
-                  style: TextStyle(color: Colors.black, fontSize: 20),
+                  style: TextStyle(color: ColorsPalete.lightGreen, fontSize: 20),
                 ),
               ),
             ),

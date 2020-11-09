@@ -12,6 +12,7 @@ class Dates extends StatelessWidget {
         .toList();
 
     return Scaffold(
+      backgroundColor: ColorsPalete.primaryBlack,
       body: Stack(
         children: <Widget>[
           Column(
@@ -34,13 +35,14 @@ class Dates extends StatelessWidget {
                     width: 200.0,
                     margin: const EdgeInsets.only(right: 20.0, bottom: 20.0),
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                      color: ColorsPalete.lightBlack,
+                      border: Border.all(color: ColorsPalete.lightGreen) ,
+                      borderRadius: BorderRadius.circular(10.0,),
+                      color: ColorsPalete.primaryBlack,
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text('Back to main screen',
-                          style: TextStyle(color: Colors.black, fontSize: 20)),
+                          style: TextStyle(color: Colors.white, fontSize: 20)),
                     )),
               ),
             ],
