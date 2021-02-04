@@ -1,6 +1,6 @@
 # Supercharged
 
-A Flutter Application to see the possibilities of Supercharged Library
+A Flutter Application to see the possibilities of Supercharged Library.
 
 ## Getting Started
 
